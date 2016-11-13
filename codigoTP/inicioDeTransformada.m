@@ -18,12 +18,10 @@ title('Gráfico audio canal 1 sin procesar');
 grid on
 
 
-
 subplot(1,2,2);
 plot(t,canal2);
 title('Gráfico audio canal 2 sin procesar');
 grid on
-
 
 
 %---------------------------------------------------------------------
@@ -34,16 +32,18 @@ T2 = transformadaZ(canal2);
 
 fprintf('Terminé de aplicar Transformada Z a la señal de entrada.\n');
 
-% %Calculamos los valores de la Transformada Z para c/punto -> x[z] 
-% canal1Trans=obtenerValores(T1,length(canal1));
-% canal2Trans=obtenerValores(T2,length(canal2));
+%Calculamos los valores de la Transformada Z para c/punto -> x[z]
+
+%ESTO ROMPE EL MATLAB Y/O HACE REINICIAR LA PC
+% canal1Trans = obtenerValores(T1,length(canal1));
+% canal2Trans = obtenerValores(T2,length(canal2));
 % 
 % fprintf('Terminé de obtener valores de la Transformada Z.\n');
-% 
-% %---------------------------------------------------------------------
-% 
-% %Graficamos x[z]
-% subplot(4,4,3)
-% plot(Fs,canal1Trans);
-% subplot(4,4,4)
-% plot(Fs,canal2Trans);
+
+%---------------------------------------------------------------------
+
+%Aplicamos el filtro FIR devolviendo x[z]*h[z]
+F1=filtroFIR(T1);
+F2=filtroFIR(T2);
+
+fprintf('Terminé de aplicar los filtro FIR.\n');

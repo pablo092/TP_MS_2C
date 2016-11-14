@@ -2,7 +2,7 @@ clc
 clear
 
 %Leo el archivo de audio
-[audio,Fs] = audioread('C:\Users\tomas\TP_MS_2C\Audio-TPMatSup.wav');
+[audio,Fs] = audioread('../Audio-TPMatSup.wav');
 
 %Separo en canales el audio estereo
 canal1 = audio(1:end,1);

@@ -30,7 +30,7 @@ grid on
 T1 = transformadaZ(canal1);
 T2 = transformadaZ(canal2);
 
-fprintf('Terminé de aplicar Transformada Z a la señal de entrada.\n');
+fprintf('Terminé de aplicar Transformada Z a la señal de entrada.\n\n');
 
 
 %---------------------------------------------------------------------
@@ -39,4 +39,15 @@ fprintf('Terminé de aplicar Transformada Z a la señal de entrada.\n');
 F1=filtroFIR(T1);
 F2=filtroFIR(T2);
 
-fprintf('Terminé de aplicar los filtro FIR.\n');
+fprintf('Terminé de aplicar los filtro FIR.\n\n');
+
+%---------------------------------------------------------------------
+
+%Aplicamos Antitransformada Z
+fprintf('Voy a aplicar Antitransformada Z.\n');
+AT1=iztrans(F1);
+fprintf('Terminé la 1º antitransformada.\n');
+AT2=iztrans(F2);
+
+fprintf('Terminé de aplicar Antitransformada Z.\n\n');
+

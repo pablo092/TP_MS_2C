@@ -39,19 +39,41 @@ fprintf('Terminé de aplicar Antitransformada Z.\n\n');
 
 %---------------------------------------------------------------------
 
-%GRAFICOS
+%Calculo los valores de la respuesta final Y[n]
+resultadoCanal1=obtenerValores(AT1,length(canal1));
+resultadoCanal2=obtenerValores(AT2,length(canal2));
 
-%Grafico el archivo de audio sin procesar
+%---------------------------------------------------------------------
+
+%Hacemos los gráficos
+fprintf('Se procede a graficar.\n\n');
+
 t=(1/Fs:1/Fs:length(audio)/Fs);
 
 figure;
-subplot(1,2,1);
+subplot(2,2,1);
 plot(t,canal1);
-title('Gráfico audio canal 1 sin procesar');
+title('Gráfico canal 1 sin procesar');
 grid on
 
-
-subplot(1,2,2);
+subplot(2,2,2);
 plot(t,canal2);
-title('Gráfico audio canal 2 sin procesar');
+title('Gráfico canal 2 sin procesar');
 grid on
+
+%En estos dos de abajo en realidad va resultadoCanal1 y resultadoCanal2
+%en lugar de audio (en la funcion de plot)
+
+subplot(2,2,3);
+plot(t,audio);
+title('Gráfico canal 1 procesado');
+grid on
+
+subplot(2,2,4);
+plot(t,audio);
+title('Gráfico canal 2 procesado');
+grid on
+
+fprintf('Terminado.\n');
+
+%---------------------------------------------------------------------

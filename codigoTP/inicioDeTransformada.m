@@ -32,13 +32,6 @@ T2 = transformadaZ(canal2);
 
 fprintf('Terminé de aplicar Transformada Z a la señal de entrada.\n');
 
-%Calculamos los valores de la Transformada Z para c/punto -> x[z]
-
-%ESTO ROMPE EL MATLAB Y/O HACE REINICIAR LA PC
-% canal1Trans = obtenerValores(T1,length(canal1));
-% canal2Trans = obtenerValores(T2,length(canal2));
-% 
-% fprintf('Terminé de obtener valores de la Transformada Z.\n');
 
 %---------------------------------------------------------------------
 

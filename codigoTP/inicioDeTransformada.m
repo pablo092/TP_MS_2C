@@ -61,16 +61,13 @@ plot(t,canal2);
 title('Gráfico canal 2 sin procesar');
 grid on
 
-%En estos dos de abajo en realidad va resultadoCanal1 y resultadoCanal2
-%en lugar de audio (en la funcion de plot)
-
 subplot(2,2,3);
-plot(t,audio);
+plot(t,resultadoCanal1);
 title('Gráfico canal 1 procesado');
 grid on
 
 subplot(2,2,4);
-plot(t,audio);
+plot(t,resultadoCanal2);
 title('Gráfico canal 2 procesado');
 grid on
 

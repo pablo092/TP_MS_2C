@@ -4,10 +4,11 @@ clear
 %Leo el archivo de audio
 [audio,Fs] = audioread('../Audio-TPMatSup.wav');
 
+fprinf('Leí el audio.\n');
 %Separo en canales el audio estereo
 canal1 = audio(1:end,1);
 canal2 = audio(1:end,2);
-
+fprintf('Separé el audio en 2 canales.\n\n');
 
 %---------------------------------------------------------------------
 

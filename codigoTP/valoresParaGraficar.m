@@ -1,4 +1,4 @@
-function F = obtenerValores(trans,longitud)
+function F = valoresParaGraficar(trans,longitud)
     
     fprintf('Entro en la funcion obtenerValores().\n');
     

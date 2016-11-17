@@ -40,8 +40,8 @@ fprintf('Terminé de aplicar Antitransformada Z.\n\n');
 %---------------------------------------------------------------------
 
 %Calculo los valores de la respuesta final Y[n]
-resultadoCanal1=obtenerValores(AT1,length(canal1));
-resultadoCanal2=obtenerValores(AT2,length(canal2));
+resultadoCanal1 = valoresParaGraficar(AT1,length(canal1));
+resultadoCanal2 = valoresParaGraficar(AT2,length(canal2));
 
 %---------------------------------------------------------------------
 

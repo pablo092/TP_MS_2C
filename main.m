@@ -2,7 +2,7 @@ clc
 clear
 
 %Leo el archivo de audio
-[audio,Fs] = audioread('../Audio-TPMatSup.wav');
+[audio,Fs] = audioread('Audio-TPMatSup.wav');
 fprintf('Leí el audio.\n');
 
 %Separo en canales el audio estereo

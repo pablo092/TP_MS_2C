@@ -1,27 +1,28 @@
 clc
 clear
 
-%Leo el archivo de audio
+%Leemos el archivo de audio
 [audio,Fs] = audioread('Audio-TPMatSup.wav');
 fprintf('Leí el audio.\n');
 
-%Separo en canales el audio estereo
+%Separamos el audio en 2 canales para luego poder apreciar los cambios
 canal1 = audio(1:end,1);
 canal2 = audio(1:end,2);
 fprintf('Separé el audio en 2 canales.\n\n');
 
 %---------------------------------------------------------------------
 
-%Aplicamos el filtro FIR
-fprintf('Aplicamos el filtro FIR a cada canal.\n');
-
+%Declaramos numerador y denominador de la función dada en el TP
 numFiltro = [0, 1, 1.1];
 denFiltro = [1, 0, -0.1];
+
+%Aplicamos el filtro FIR
+fprintf('Procedo a aplicar el filtro FIR a cada canal.\n');
 
 filtroCanal1 = filter(numFiltro, denFiltro, canal1);
 filtroCanal2 = filter(numFiltro, denFiltro, canal2);
 
-fprintf('Terminé de aplicar los filtro FIR.\n\n');
+fprintf('Terminé de aplicar el filtro FIR.\n\n');
 
 %---------------------------------------------------------------------
 
